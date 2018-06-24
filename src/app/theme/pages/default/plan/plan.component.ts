@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
 import { Helpers } from '../../../../helpers';
 import { ScriptLoaderService } from '../../../../_services/script-loader.service';
-import { PlanService } from '../../../../_services/plan.service';
+import { environment as env} from '../../../../../environments/environment'
 
-
+declare function loadPlan(url: string, token: string): any;
 @Component({
 	selector: "app-plan",
 	templateUrl: "./plan.component.html",
@@ -14,20 +14,17 @@ export class PlanComponent implements OnInit, AfterViewInit {
 
 	constructor(
 		private _script: ScriptLoaderService,
-		private planService: PlanService)  {
-
-	}
+	) {}
 	ngOnInit()  {
-		this.loadData();
 	}
 
 	ngAfterViewInit()  {
 		this._script.loadScripts('app-plan', ['assets/app/js/datatable/datatables.js', 'assets/app/js/left.js']);
+		this.loadData();
 	}
 
 	loadData() {
-		this.planService.getPlan().then((res: any) => {
-			this.plans = res.items;
-		});
+		let user = JSON.parse(localStorage.getItem('currentUser'));
+		loadPlan(env.apiUrl + '/api/v1/plan', user.token);
 	}
 }

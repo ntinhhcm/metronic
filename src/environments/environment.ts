@@ -5,5 +5,5 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'http://dev.www.rpm-tools.com'
+    apiUrl: 'http://dev.rpm-tools.com'
 };
