@@ -69,17 +69,94 @@
 			<!--begin: Search Form -->
 			<div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
 				<div class="row align-items-center">
-					<div class="col-xl-8 order-2 order-xl-1">
+					<div class="col-xl-12 order-2 order-xl-1">
 						<div class="form-group m-form__group row align-items-center">
-							<div class="col-md-4">
-								<div class="m-input-icon m-input-icon--left">
-									<input type="text" class="form-control m-input" placeholder="Search..." id="generalSearch">
-									<span class="m-input-icon__icon m-input-icon__icon--left">
-										<span>
-											<i class="la la-search"></i>
+							<div class="col-xs-6 col-sm-3">
+								<div class="m-form__group m-form__group--inline">
+									<div class="m-form__label">
+										<label>
+											BadgeId:
+										</label>
+									</div>
+									<div class="m-input-icon m-input-icon--left">
+										<input type="text" class="form-control m-input" placeholder="Search..." id="badge_id">
+										<span class="m-input-icon__icon m-input-icon__icon--left">
+											<span>
+												<i class="la la-barcode"></i>
+											</span>
 										</span>
-									</span>
+									</div>
 								</div>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<div class="m-form__group m-form__group--inline">
+									<div class="m-form__label">
+										<label>
+											Name:
+										</label>
+									</div>
+									<div class="m-input-icon m-input-icon--left">
+										<input type="text" class="form-control m-input" placeholder="Search..." id="member_name">
+										<span class="m-input-icon__icon m-input-icon__icon--left">
+											<span>
+												<i class="la la-users"></i>
+											</span>
+										</span>
+									</div>
+								</div>
+								<div class="d-md-none m--margin-bottom-10"></div>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<div class="m-form__group m-form__group--inline">
+									<div class="m-form__label">
+										<label>
+											Credits:
+										</label>
+									</div>
+									<div class="m-form__control">
+										<select class="form-control m-bootstrap-select m-bootstrap-select--solid" id="value">
+											<option value="">
+												All
+											</option>
+											<option value="1">
+												On
+											</option>
+											<option value="0">
+												No
+											</option>
+											<option value="-1">
+												Off
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="d-md-none m--margin-bottom-10"></div>
+							</div>
+							<div class="col-xs-6 col-sm-3">
+								<div class="m-form__group m-form__group--inline">
+									<div class="m-form__label">
+										<label>
+											Assign:
+										</label>
+									</div>
+									<div class="m-form__control">
+										<select class="form-control m-bootstrap-select m-bootstrap-select--solid" id="value2">
+											<option value="">
+												All
+											</option>
+											<option value="1">
+												On
+											</option>
+											<option value="0">
+												No
+											</option>
+											<option value="-1">
+												Off
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="d-md-none m--margin-bottom-10"></div>
 							</div>
 						</div>
 					</div>

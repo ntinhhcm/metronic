@@ -27,4 +27,9 @@ export class PlanComponent implements OnInit, AfterViewInit {
 		let user = JSON.parse(localStorage.getItem('currentUser'));
 		loadPlan(env.apiUrl + '/api/v1/plan', user.token);
 	}
+
+	search() {
+		let user = JSON.parse(localStorage.getItem('currentUser'));
+		loadPlan(env.apiUrl + '/api/v1/plan', user.token);
+	}
 }
